@@ -1,16 +1,16 @@
 import React, { Component } from "react";
+import QuoteBox from "./QuoteBox";
 
 class App extends Component {
     render() {
         return (
             <div>
-                <h1>Hello world!</h1>
-                <p>hello</p>
+                <div id="quote-box-container">
+                    <QuoteBox />
+                </div>
             </div>
         );
     }
 }
-
-function QuoteBox() {}
 
 export default App;

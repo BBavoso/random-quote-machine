@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+}
+
+#quote-box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+}
+
+#quote-box {
+    position: absolute;
+    top: 50%;
+    width: 35%;
+    border: 1px solid black;
+    padding: 15px;
+    margin: 0 auto;
+    text-align: center;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
