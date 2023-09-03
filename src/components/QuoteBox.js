@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
 function QuoteBox() {
-    const quoteText = "Example Quote Text";
+    const quoteText =
+        "Example Quote Text long quote long quote long quote long quote long quote long quote";
 
     const getTwitterLink = (textToTweet) => {
         const twitterIntentLink = "https://twitter.com/intent/tweet?text=";

@@ -15,9 +15,31 @@
     top: 50%;
     width: 35%;
     border: 1px solid black;
-    padding: 15px;
+    padding: 40px 15px;
     margin: 0 auto;
     text-align: center;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+
+#text {
+    font-size: 2rem;
+}
+
+#author {
+    font-size: 1.2rem;
+    padding: 5px;
+    text-align: right;
+}
+
+#new-quote {
+    display: block;
+    margin: 0 auto;
+}
+
+#tweet-quote {
+    margin-top: 15px;
+    border: 1px solid black;
+    position: absolute;
+    transform: translateX(-50%);
 }
