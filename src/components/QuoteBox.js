@@ -1,19 +1,24 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 
-function QuoteBox() {
-    const quoteText =
-        "Example Quote Text long quote long quote long quote long quote long quote long quote";
+function QuoteBox({ getNewQuote }) {
+    const [quote, setQuote] = useState(() => getNewQuote());
 
-    const getTwitterLink = (textToTweet) => {
+    const updateQuote = () => {
+        setQuote(getNewQuote());
+    };
+
+    const getTwitterLink = () => {
         const twitterIntentLink = "https://twitter.com/intent/tweet?text=";
-        return twitterIntentLink + encodeURI(quoteText);
+        return twitterIntentLink + encodeURI(quote.text);
     };
 
     return (
         <div id="quote-box">
-            <p id="text">{quoteText}</p>
-            <p id="author">-example author</p>
-            <button id="new-quote">New Quote</button>
+            <p id="text">{quote.text}</p>
+            <p id="author">{quote.author}</p>
+            <button id="new-quote" onClick={updateQuote}>
+                New Quote
+            </button>
             <a id="tweet-quote" href={getTwitterLink()} target="_blank">
                 tweet
             </a>
